@@ -9,8 +9,8 @@
 #define Diceware_h
 
 // #include "WProgram.h"
-#include <map>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -18,9 +18,9 @@ class Diceware
 {
     public:
         Diceware();
-        string getWord(string roll);
+        string getWord(int roll);
     private:
-        string _roll;
+        int _roll;
 };
 
 #endif
