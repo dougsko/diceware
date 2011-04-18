@@ -8,9 +8,8 @@
 #ifndef Diceware_h
 #define Diceware_h
 
-// #include "WProgram.h"
 #include <string>
-#include <stdlib.h>
+// #include "WProgram.h"
 
 using namespace std;
 

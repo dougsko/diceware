@@ -6,11 +6,10 @@
  *
  */
 
-#include "Diceware-array.h"
-#include <string>
-#include <string.h>
+#include "WProgram.h"
+#include "Diceware.h"
 #include <math.h>
-#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -63,7 +62,7 @@ Diceware::Diceware()
  */
 string Diceware::getWord(int roll)
 {
-    char temp1[10];
+    char temp1[5];
     sprintf(temp1, "%d", roll - 11111);
     _roll = BaseToDec(temp1, 6);
 
