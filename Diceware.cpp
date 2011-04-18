@@ -10,6 +10,7 @@
 #include "Diceware.h"
 #include <math.h>
 #include <string.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -17,7 +18,8 @@ const int MAX_BASE = 36;
 char symbols[37] = "0123456789ABCDEFGHIJKLMNoPQRSTUVWXYZ";
 //Finds the index of a particular character (if it exists) in an array. Returns last character on failure
 //Used by BaseToDec to find face values
-int GetIndex(char * pString, char search)
+int 
+GetIndex(char * pString, char search)
 {
 	int index = 0;
 	while(*pString != (char)0) //Loop will finish at null character if no match is found
@@ -30,7 +32,8 @@ int GetIndex(char * pString, char search)
 	return index;
 }
 
-int BaseToDec(char* number, int base)
+int 
+BaseToDec(char* number, int base)
 {
 	if(base<2||base>MAX_BASE)
 		return 0; //Failed
@@ -60,7 +63,8 @@ Diceware::Diceware()
  * (66666 - 11111).to_s.to_i(6)
  * => 7775
  */
-string Diceware::getWord(int roll)
+char * 
+Diceware::getWord(int roll)
 {
     char temp1[5];
     sprintf(temp1, "%d", roll - 11111);
