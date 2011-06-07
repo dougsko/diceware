@@ -8,7 +8,7 @@
 #ifndef Diceware_h
 #define Diceware_h
 
-#include "WProgram.h"
+//#include "WProgram.h"
 
 using namespace std;
 

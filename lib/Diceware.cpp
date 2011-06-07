@@ -6,7 +6,7 @@
  *
  */
 
-#include "WProgram.h"
+// #include "WProgram.h"
 #include "Diceware.h"
 #include <math.h>
 #include <string.h>

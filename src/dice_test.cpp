@@ -1,4 +1,3 @@
-#include <string>
 #include <iostream>
 #include <cstdlib>
 #include "Diceware.h"
@@ -7,7 +6,7 @@ int
 main(int argc, char **argv)
 {
     Diceware diceware;
-    string word;
+    char *word;
     int roll = atoi(argv[1]);
 
     word = diceware.getWord(roll);
