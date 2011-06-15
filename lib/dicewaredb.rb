@@ -24,6 +24,14 @@ class Alphanumeric
     property :char, String
 end
 
+class Ascii
+    include DataMapper::Resource
+
+    property :_id, Serial
+    property :number, String
+    property :char, String
+end
+
 class DiceDB
     def create
         DataMapper.auto_migrate!
@@ -45,12 +53,23 @@ class DiceDB
                 )
             end
         end
+
+        File.open('/home/doug/bin/diceware/data/diceware_ascii.txt') do |f|
+            f.readlines.each do |line|
+                Ascii.create(
+                    :number => line.chomp.split(" ")[0],
+                    :char => line.chomp.split(" ")[1]
+                )
+            end
+        end
     end
 
     def test
         word = Word.all(:number => '11111')
         puts word[0].word
         char = Alphanumeric.all(:number => '42')
+        puts char[0].char
+        char = Ascii.all(:number => '111')
         puts char[0].char
     end
 end
